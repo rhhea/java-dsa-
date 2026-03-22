@@ -1,3 +1,4 @@
+package arrays;
 public class buysellstocks {
     public static void main(String args[])
     {

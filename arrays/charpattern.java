@@ -1,3 +1,4 @@
+package arrays;
 public class charpattern {
     public static void main(String args[])
     {

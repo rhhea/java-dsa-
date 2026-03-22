@@ -1,3 +1,4 @@
+package arrays;
 /*How It Works (Step-by-Step)
 1.Start at the beginning of the array.
 2.Find the smallest element in the unsorted part.

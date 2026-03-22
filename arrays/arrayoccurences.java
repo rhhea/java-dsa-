@@ -1,3 +1,4 @@
+package arrays;
 public class arrayoccurences {
     public static void main(String args[])
     {

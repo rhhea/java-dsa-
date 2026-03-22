@@ -1,3 +1,4 @@
+package arrays;
  /*How It Works
 1.Start from the second element (index 1), since the first element is trivially sorted.
 2.Compare it with the elements before it.

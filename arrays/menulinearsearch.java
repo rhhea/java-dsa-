@@ -1,3 +1,4 @@
+package arrays;
 import java.util.*;
 public class menulinearsearch {
     public static void main(String[] args) {

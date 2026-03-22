@@ -1,3 +1,4 @@
+package arrays;
 public class invertedstar {
     public static void main(String args[])
     {

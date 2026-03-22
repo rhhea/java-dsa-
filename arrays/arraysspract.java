@@ -1,3 +1,4 @@
+package arrays;
 public class arraysspract {
     public static void main(String[] args) {
         int arr[] = {2,5,69,1,3,27};

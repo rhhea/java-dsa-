@@ -1,3 +1,4 @@
+package arrays;
 public class trappedrainwater 
 {
     public static void main(String args[])

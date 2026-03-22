@@ -1,3 +1,4 @@
+package arrays;
 import java.util.Arrays;
 import java.util.Collections;
 // This program demonstrates the use of built-in sorting methods in Java.
