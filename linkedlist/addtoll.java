@@ -132,6 +132,20 @@ public class addtoll {
         return -1; //not found 
     }
 
+    //reverse ll method 
+    public void reverse(){
+        Node prev = null;
+        Node curr = tail = head; //assigning the head to be tail as it will be reversed the head becomes the tail 
+        Node next;
+        while(curr != null){
+            next = curr.ref;
+            curr.ref = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     //recursive search method 
     public int recursiveSearch(int key,Node head){
          //not found base casee 
@@ -146,6 +160,23 @@ public class addtoll {
         if(index == -1)
             return -1;
         return index+1;
+    }
+
+    //remove nth node from last method 
+    public void removeNth(int n){
+        int index = size - n;
+        Node prev = null;
+        Node curr = head;
+        size--;
+        for(int i = 0;i<index;i++){
+            prev = curr;
+            curr = curr.ref;
+        }
+        if(prev == null){ //if deleting head 
+            head = head.ref;
+            return;
+        }
+        prev.ref = curr.ref;
     }
     //main function 
     public static void main(String args[]){
@@ -167,6 +198,13 @@ public class addtoll {
         System.out.println();
         System.out.println("Element found at position " + ll.iterativeSearch(20));
         System.out.println("Element found at position " + ll.recursiveSearch(20,head));
-
+        ll.reverse();
+        ll.printll(head, tail);
+        System.out.println();
+        ll.addFirst(35);
+        ll.addFirst(40);
+        ll.removeNth(2);
+        ll.printll(head, tail);
+        System.out.println();
     }
 }
