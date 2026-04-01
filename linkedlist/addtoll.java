@@ -95,7 +95,58 @@ public class addtoll {
     }
 
     //remove last 
-    
+    public int removeLast(){
+        if(head == null){
+            System.out.println("no elements  in the LL to delete");
+            return -1;
+        }
+        if(size ==1){
+            int val = head.data;
+            head = tail = null;
+            size--;
+            return val;
+        }
+        int val = tail.data;
+        Node prev = head;
+        int  i = 0;
+        while(i < size-2){
+            prev = prev.ref;
+            i++;
+        }
+        prev.ref = null;
+        tail = prev;
+        size--;
+        return val;
+    }
+
+    //iterative search
+    public int iterativeSearch(int key){
+        Node temp = head;
+        int i=0;
+        while(temp != null){
+            if(temp.data == key) //key found
+                return i;
+            i++;
+            temp = temp.ref;
+        }
+        return -1; //not found 
+    }
+
+    //recursive search method 
+    public int recursiveSearch(int key,Node head){
+         //not found base casee 
+        if(head == null) //head.ref == null && head.data != key
+            return -1;
+        //key found
+        if(head.data == key){
+            return 0;
+        }
+        //kaam
+        int index = recursiveSearch(key, head.ref);
+        if(index == -1)
+            return -1;
+        return index+1;
+    }
     //main function 
     public static void main(String args[]){
         addtoll ll = new addtoll();
@@ -111,5 +162,11 @@ public class addtoll {
         System.out.println("Size of LL: "+size);
         ll.printll(head, tail);
         System.out.println();
+        System.out.println("Element deleted from last "+ ll.removeLast());
+        ll.printll(head,tail);
+        System.out.println();
+        System.out.println("Element found at position " + ll.iterativeSearch(20));
+        System.out.println("Element found at position " + ll.recursiveSearch(20,head));
+
     }
 }
