@@ -92,5 +92,6 @@ public class palindromell {
         ll.addLast(10);
         ll.printll();
         System.out.println("\nPalindrome check: "+ ll.palindrome(head));
+
     }
 }
