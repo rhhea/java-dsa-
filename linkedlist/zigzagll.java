@@ -68,6 +68,7 @@ public class zigzagll {
         Node mid = getmid(head);
         //step-2: reverse second half
         Node rh = reverse(mid.next);
+        mid.next = null;
         //step-3: merge zigzag
         Node lh = head;
         Node nextl,nextr;
@@ -84,6 +85,17 @@ public class zigzagll {
     }
     //main method 
     public static void main(String args[]){
+        zigzagll ll = new zigzagll();
+        ll.addLast(10);
+        ll.addLast(20);
+        ll.addLast(30);
+        ll.addLast(40);
+        ll.addLast(50);
+        System.out.println("Before zigzag: ");
+        ll.printll();
+        System.out.println("\nAfter zigzag: ");
+        ll.zigzag(head);
+        ll.printll();
 
     }
 }
