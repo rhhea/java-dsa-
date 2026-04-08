@@ -21,9 +21,21 @@ public class doublyll{
 
     //add last method
     public static void addLast(int data){
-        
-    }
 
+    }
+    //print ll method
+    public void printll(Node head,Node tail){ //O(n)
+        if(head == null){
+            System.out.println("Linked List is empty");
+            return;
+        }
+        Node temp = head;
+        while(temp.next != null){
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.print(temp.data);
+    }
     //main method
     public static void main(String args[]){
         doublyll ll = new doublyll();
