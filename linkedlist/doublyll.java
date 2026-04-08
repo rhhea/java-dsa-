@@ -19,8 +19,14 @@ public class doublyll{
     public static Node head;
     public static Node tail;
 
+    //add last method
+    public static void addLast(int data){
+        
+    }
+
     //main method
     public static void main(String args[]){
         doublyll ll = new doublyll();
+        
     }
 }
