@@ -39,6 +39,7 @@ public class doublyll{
     //main method
     public static void main(String args[]){
         doublyll ll = new doublyll();
-        
+        //just for the commit to regain my streak yo 
+        ll.printll();
     }
 }
