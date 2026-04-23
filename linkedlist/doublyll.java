@@ -40,6 +40,8 @@ public class doublyll{
     public static void main(String args[]){
         doublyll ll = new doublyll();
         //just for the commit to regain my streak yo 
+        //i'll come back stronger and harder i pray 
         ll.printll();
+        ll.printlll();
     }
 }
